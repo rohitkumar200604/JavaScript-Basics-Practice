@@ -239,3 +239,60 @@ for (let i=0;i<marks.length;i++) {
 for (let i of marks) {
   console.log(i);
 }
+
+//Array Methods
+//1) Push()
+let foodItems = ["potato", "apple", "litchi","tomato"];
+console.log("Before Push:",foodItems);
+foodItems.push("chips");
+console.log("After Push 1:",foodItems);
+foodItems.push("Paneer", "Burger");
+console.log("After Push 2:",foodItems);
+
+//2) Pop()
+let deletedItem = foodItems.pop()
+console.log("After Pop 1:",foodItems);
+console.log("Deleted Item is:",deletedItem);
+
+//3) toString()
+console.log("Marks of students:",marks);
+console.log("Marks to students converted to strings:",marks.toString());
+
+//4) concat()
+let marvel_heroes = ["thor", "spiderman", "ironman"];
+let dc_heroes = ["superman","batman"];
+let indian_heroes = ["Shaktimaan","Krish", "G-One"];
+let heroes = marvel_heroes.concat(indian_heroes,dc_heroes);
+console.log("Concat of Heroes:",heroes);
+ 
+//5) unshift()
+marvel_heroes.unshift("antman");
+console.log("After Unshift()",marvel_heroes);
+let removedItem = marvel_heroes.shift();
+console.log("After Shift:",marvel_heroes);
+console.log("The deleted item is:",removedItem);
+
+//6) slice
+marvel_heroes.push("antman","doctor strange","black panther");
+console.log("Array before slicing:",marvel_heroes);
+let sliceItems = marvel_heroes.slice(3,6);
+console.log("Array after slicing:",sliceItems);
+
+//7) splice
+let arr = [1,2,3,4,5,6,7];
+console.log("Array:",arr);
+// Add items
+arr.splice(2,0,101)
+console.log("Array after adding:",arr);
+//Remove items
+arr.splice(3,1)
+console.log("Array after removing:",arr);
+//Replace items
+arr.splice(3,1,101)
+console.log("Array after replacing",arr);
+//Random thing
+arr.splice(2,2,101,102)
+console.log("Array after random things",arr);
+//Splice Function
+arr.splice(4);
+console.log("Array after slice:",arr);
