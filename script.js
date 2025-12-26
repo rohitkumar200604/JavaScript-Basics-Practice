@@ -296,3 +296,61 @@ console.log("Array after random things",arr);
 //Splice Function
 arr.splice(4);
 console.log("Array after slice:",arr);
+
+//User defined function
+function Myfunction() {
+  console.log("Hello World");
+  console.log("We are learning JS");
+}
+Myfunction();
+
+//Sum function
+function summation(a,b) {
+  console.log("The sum is:",a+b);
+  s = a+b;
+  return s;
+}
+summation(2,3);
+
+//Arrow Functions
+const add = (a,b) => {
+  console.log("The sum is:",a+b);
+  return a+b;
+}
+add(5,6);
+
+//ForEach Loop
+let city = ["mumbai","pune","delhi"];
+city.forEach(function printVal(val) {
+  console.log(val);
+});
+city.forEach((val) => {
+  console.log(val.toUpperCase());
+});
+
+//map
+let array = [14,23,87,25];
+let newArr = array.map((val) => {
+  return val**2;
+})
+console.log(newArr);
+
+//filter
+let filterArray = array.filter((val) => {
+  return val%2 === 0;
+})
+console.log("The filter array is:",filterArray); 
+
+//reduce
+let arr1 = [1,2,3,4,5,6,7,8,9];
+const addition = arr1.reduce((res,curr) => {
+  return res + curr;
+});
+console.log("The sum of elements in array:",addition);
+ 
+//maximum element
+let arr2 = [55,68,84,26,5,75];
+let max_value = arr2.reduce((prev,curr) => {
+  return prev > curr ? prev : curr;
+})
+console.log("The maximum element is:",max_value);
